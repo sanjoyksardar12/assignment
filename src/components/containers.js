@@ -1,4 +1,3 @@
-import { memo } from "react";
 import DataCardHOC from "./card";
 import { ApiResponseTypes } from "../app-constant";
 

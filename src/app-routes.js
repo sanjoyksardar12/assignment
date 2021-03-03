@@ -24,3 +24,15 @@ const routes = [
 ];
 
 export default routes;
+
+
+// const routes = () => {
+//   return (
+//     <>
+//       <Route exact path="/" component={Posts} />
+//       <Route path="/posts" component={Posts} />
+//       <Route path="/albums" component={Albums} />
+//       <Route path="/users" component={Users} />
+//       <Route path="/todos" component={Todos} />
+//     </>
+//   )

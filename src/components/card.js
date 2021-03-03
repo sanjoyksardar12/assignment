@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { selectData, isFetchingData } from "../selectors";
 import Loader from "./loader";
@@ -19,7 +19,7 @@ const DataCardHOC = ({ enableAddTodo, name, view }) => {
           titleProps.map(prop => {
             if (typeof prop === "string") {
               return <p key={prop}>{object[prop]}</p>;
-            } else if (typeof prop === "object") {
+            } else { //if (typeof prop === "object")
               const key = Object.keys(prop)[0];
               const propsValues = prop[key];
               return propsValues.map(p => <p key={`${key}-${p}`}>{object[key][p]}</p>)
@@ -28,7 +28,8 @@ const DataCardHOC = ({ enableAddTodo, name, view }) => {
         }
       </>
       )
-    })
+    }, []);
+
     if (isFetching) {
       return <Loader />
     }

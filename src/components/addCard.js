@@ -1,5 +1,4 @@
-import React, { memo } from "react";
-import { useCallback, useState } from "react/cjs/react.development";
+import { useCallback, useState } from "react";
 import useAddCard from "./hooks/addCard";
 import { addPosts } from "../actions";
 
@@ -9,7 +8,7 @@ function AddCard({ name }) {
 
   const expandForm = useCallback(() => {
     setExpandAddForm(true);
-  })
+  }, [])
 
   if (!expandAddForm) {
     return (<button onClick={expandForm}>{`Add ${name.toLowerCase()}`} </button>)
@@ -32,5 +31,4 @@ function AddCard({ name }) {
     </form>
   </div>)
 }
-
-export default memo(AddCard);
+export default AddCard;

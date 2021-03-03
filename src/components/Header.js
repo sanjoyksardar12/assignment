@@ -18,20 +18,20 @@ function Header() {
   const getPosts = useCallback(async () => {
     await dispatch(fetchPosts());
     setAlbumVisibility(true);
-  });
+  }, [dispatch]);
 
   const getAlbums = useCallback(async () => {
     await dispatch(fetchAlbums());
     setDropdownVisibility(true);
-  });
+  }, [dispatch]);
 
   const getUsers = useCallback(() => {
     dispatch(fetchUsers());
-  });
+  }, [dispatch]);
 
   const getTodos = useCallback(() => {
     dispatch(fetchTodos());
-  });
+  }, [dispatch]);
 
   return (
     <header className="App-header">
