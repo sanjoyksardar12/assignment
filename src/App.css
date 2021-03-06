@@ -113,7 +113,7 @@
 /* posts */
 .page-content .cards{
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   display: flex;
   padding: 10px;
 }
